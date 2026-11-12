@@ -1,7 +1,7 @@
 <!doctype html><html lang=ko><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <style>body{font-family:-apple-system,"Apple SD Gothic Neo",sans-serif;max-width:720px;margin:0 auto;padding:32px 20px;line-height:1.7;color:#1d1d1f;background:#fff}h1{color:#295C52}h2{margin-top:28px;font-size:1.15em}a{color:#295C52}@media(prefers-color-scheme:dark){body{background:#111;color:#eee}h1,a{color:#8fd3c0}}</style><title>우리악보 개인정보처리방침</title></head><body><h1>우리악보 개인정보처리방침</h1>
-<p>시행일: 2026년 11월 9일</p>
-<p>우리악보(이하 &quot;앱&quot;)는 사용자의 개인정보를 수집하지 않습니다.</p>
+<p>최종 개정일: 2026년 11월 12일</p>
+<p>우리악보(이하 &quot;앱&quot;)는 개발자 서버로 사용자의 개인정보를 수집하지 않습니다.</p>
 <h2>1. 수집하는 정보</h2>
 <p>앱은 개발자에게 어떤 개인정보도 전송하거나 수집하지 않습니다. 광고, 분석, 추적 도구를 사용하지 않습니다.</p>
 <h2>2. 기기에 저장되는 정보</h2>
@@ -11,11 +11,21 @@
 </ul>
 <h2>3. 기기 권한</h2>
 <ul>
-<li>카메라: 종이 악보 촬영과 얼굴 동작 페이지 넘기기에 사용합니다. 영상은 기기 안에서만 처리하며 저장하거나 전송하지 않습니다.</li>
+<li>카메라: 종이 악보 촬영과 얼굴 동작 페이지 넘기기에 사용합니다. 얼굴 동작에 대한 자세한 내용은 <a href="#face-data">3.1 얼굴 동작으로 페이지 넘기기</a>를 참고하세요.</li>
 <li>마이크: 연습 녹음과 튜너에 사용합니다. 녹음은 사용자가 선택한 악보에 첨부되어 기기(및 사용자 iCloud)에만 저장됩니다.</li>
 <li>로컬 네트워크: 같은 네트워크의 다른 기기와 페이지 넘김을 맞추거나, 사용자가 직접 입력한 WebDAV 서버에 연결할 때 사용합니다.</li>
 <li>사진: 사용자가 고른 사진만 악보로 가져옵니다.</li>
 </ul>
+<h2 id="face-data">3.1 얼굴 동작으로 페이지 넘기기</h2>
+<p>이 선택 기능은 사용자가 카메라 접근을 허용하고 얼굴 동작 감지를 시작할 때만 동작합니다. 앱은 ARKit의 얼굴 추적에서 왼쪽 눈과 오른쪽 눈이 감긴 정도, 턱이 열린 정도, 추적 상태와 프레임 시각을 읽습니다. 이 값은 얼굴 동작을 감지하고 악보 페이지를 넘기는 데만 사용합니다. 얼굴로 사용자를 식별하거나 인증하지 않습니다.</p>
+<p>감지 값은 기능 실행 중 기기 메모리에서 일시적으로 처리합니다. 감지를 중지하거나 악보 화면을 나가면 추적 세션을 종료하고 남은 감지 값과 판정 상태를 메모리에서 지웁니다. 얼굴 영상, 사진, 깊이 영상, 얼굴 형상 및 감지 값은 파일, iCloud 또는 서버에 저장하지 않으며 개발자나 제3자에게 공유하거나 전송하지 않습니다. 삭제를 요청할 수 있는 보관 사본은 생성되지 않습니다. 반응 속도와 좌우 보정 같은 사용자 설정은 얼굴 데이터와 별도로 기기에 저장됩니다.</p>
+<p>얼굴 동작 설정에서 감지를 중지하거나 시스템 설정에서 앱의 카메라 권한을 철회할 수 있습니다. 얼굴 동작을 사용하지 않아도 악보를 읽고 페이지를 넘길 수 있습니다.</p>
+<section lang="en" aria-labelledby="face-data-en">
+<h3 id="face-data-en">3.1 Face gestures for page turning</h3>
+<p>This optional feature runs only after the user grants camera access and starts face gesture detection. The app reads left and right eye closure, jaw opening, tracking status, and frame timestamps from ARKit face tracking. It uses these values solely to detect gestures and turn sheet music pages. It does not identify or authenticate the user by face.</p>
+<p>The app processes these values temporarily in device memory while detection is active. Stopping detection or leaving the score ends the tracking session and clears remaining samples and gesture recognition state. The app does not save face video, photos, depth images, face geometry, or gesture measurements to files, iCloud, or any server. It does not share or transmit them to the developer or any third party. No retained copy exists to delete. Preferences such as response speed and left-right calibration are stored separately from face data.</p>
+<p>Users can stop detection in the face gesture settings or revoke camera access in system Settings. Reading and manual page turning remain available without face gesture detection.</p>
+</section>
 <h2>4. 외부 서비스</h2>
 <p>사용자가 앱 안 웹 화면이나 WebDAV 서버를 이용하면, 해당 웹사이트·서버와 직접 통신합니다. 그 서비스의 개인정보 처리는 각 서비스의 방침을 따릅니다.</p>
 <h2>5. 아동</h2>
